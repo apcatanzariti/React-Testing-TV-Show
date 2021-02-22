@@ -3,3 +3,12 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
+import App from './App';
+
+
+// testing for App.js component
+
+test('test to make sure no errors', () => {
+    render(<App />);
+});
