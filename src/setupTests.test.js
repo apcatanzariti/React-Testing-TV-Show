@@ -7,6 +7,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
+import Episodes from './components/Episodes';
 import { fetchShow as mockFetchShow } from './api/fetchShow';
 
 jest.mock('./api/fetchShow');
@@ -123,3 +124,13 @@ test('test to make sure no errors', async () => {
     expect(await screen.findByRole('heading', {name: /stranger things/i})).toBeVisible();
 
 });
+
+// const getDataMock = jest.fn();
+
+// test('testing the episodes component', () => {
+//     const { rerender } = render(<Episodes episodes={getDataMock}/>);
+
+//     userEvent.click(screen.getByPlaceholderText(/select an option/i));
+
+//     rerender(<Episodes episodes={getDataMock}/>);
+// });
